@@ -4,6 +4,13 @@ public class Evaluation
 	private String comment;
 	private float rating;
 
+	public Evaluation(Account evaluator, String comment, float rating)
+	{
+		this.evaluator = evaluator;
+		this.comment = comment;
+		this.rating = rating;
+	}
+
 	/* Getters */
 
 	public Account getEvaluator()

@@ -3,6 +3,12 @@ public class Inaccessibility
 	private String type;
 	private String description;
 	
+	public Inaccessibility(String type, String description)
+	{
+		this.type = type;
+		this.description = description;
+	}
+
 	/* Getters */
 
 	public String getType()

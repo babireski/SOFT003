@@ -3,6 +3,12 @@ public class Coordinate
 	private float latitude;
 	private float longitude;
 
+	public Coordinate(float latitude, float longitude)
+	{
+		this.latitude = latitude;
+		this.longitude = longitude;
+	}
+
 	/* Getters */
 
 	public float getLatitude()

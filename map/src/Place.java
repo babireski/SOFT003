@@ -3,6 +3,12 @@ public class Place
 	private String name;
 	private String description;
 
+	public Place(String name, String description)
+	{
+		this.name = name;
+		this.description = description;
+	}
+
 	/* Getters */
 
 	public String getName()

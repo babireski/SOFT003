@@ -5,8 +5,18 @@ public class Stretch
 	private Coordinate a;
 	private Coordinate b;
 	private List<Coordinate> shape;
-	private String nome;
-	private float comprimento;
+	private String name;
+	private float length;
+
+
+	public Stretch(Coordinate a, Coordinate b, List<Coordinate> shape, String name, float length)
+	{
+		this.a = a;
+		this.b = b;
+		this.shape = shape;
+		this.name = name;
+		this.length = length;
+	}
 
 	/* Getters */
 
@@ -25,14 +35,14 @@ public class Stretch
 		return shape;
 	}
 
-	public String getNome()
+	public String getName()
 	{
-		return nome;
+		return name;
 	}
 
-	public float getComprimento()
+	public float getLength()
 	{
-		return comprimento;
+		return length;
 	}
 
 	/* Setters */
@@ -52,13 +62,13 @@ public class Stretch
 		this.shape = shape;
 	}
 
-	public void setNome(String nome)
+	public void setNome(String name)
 	{
-		this.nome = nome;
+		this.name = name;
 	}
 
-	public void setComprimento(float comprimento)
+	public void setLength(float length)
 	{
-		this.comprimento = comprimento;
+		this.length = length;
 	}
 }

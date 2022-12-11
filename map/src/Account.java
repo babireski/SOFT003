@@ -4,6 +4,13 @@ public class Account
 	private String email;
 	private String password;
 	
+	public Account(String name, String email, String password)
+	{
+		this.name = name;
+		this.email = email;
+		this.password = password;
+	}
+
 	/* Getters */
 
 	public String getName()
