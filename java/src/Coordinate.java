@@ -21,7 +21,7 @@ public class Coordinate
 		return longitude;
 	}
 
-	/* Set */
+	/* Setters */
 
 	public void setLatitude(float latitude)
 	{

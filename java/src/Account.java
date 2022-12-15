@@ -44,4 +44,21 @@ public class Account
 	{
 		this.password = password;
 	}
+
+	/* Others */
+
+	public void evaluatePlace()
+	{
+
+	}
+
+	public void reportInaccessibility()
+	{
+
+	}
+
+	public void deleteAccount()
+	{
+
+	}
 }

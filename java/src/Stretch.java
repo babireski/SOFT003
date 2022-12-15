@@ -2,23 +2,34 @@ import java.util.*;
 
 public class Stretch
 {
+	private String name;
+	private float length;
 	private Coordinate a;
 	private Coordinate b;
 	private List<Coordinate> shape;
-	private String name;
-	private float length;
+	private List<Inaccessibility> inaccessibilities;
 
-
-	public Stretch(Coordinate a, Coordinate b, List<Coordinate> shape, String name, float length)
+	public Stretch(Coordinate a, Coordinate b, List<Coordinate> shape, String name, float length, List<Inaccessibility> inaccessibilities)
 	{
+		this.name = name;
+		this.length = length;
 		this.a = a;
 		this.b = b;
 		this.shape = shape;
-		this.name = name;
-		this.length = length;
+		this.inaccessibilities = inaccessibilities;
 	}
 
 	/* Getters */
+
+	public String getName()
+	{
+		return name;
+	}
+	
+	public float getLength()
+	{
+		return length;
+	}
 
 	public Coordinate getA()
 	{
@@ -34,19 +45,24 @@ public class Stretch
 	{
 		return shape;
 	}
-
-	public String getName()
+	
+	public List<Inaccessibility> getInaccessibilities()
 	{
-		return name;
-	}
-
-	public float getLength()
-	{
-		return length;
+		return inaccessibilities;
 	}
 
 	/* Setters */
 	
+	public void setNome(String name)
+	{
+		this.name = name;
+	}
+
+	public void setLength(float length)
+	{
+		this.length = length;
+	}
+
 	public void setA(Coordinate a)
 	{
 		this.a = a;
@@ -62,13 +78,15 @@ public class Stretch
 		this.shape = shape;
 	}
 
-	public void setNome(String name)
+	public void setInaccessibilities(List<Inaccessibility> inaccessibilities)
 	{
-		this.name = name;
+		this.inaccessibilities = inaccessibilities;
 	}
 
-	public void setLength(float length)
+	/* Others */
+
+	public void addInaccessibility(Inaccessibility inaccessibility)
 	{
-		this.length = length;
+		inaccessibilities.add(inaccessibility);
 	}
 }

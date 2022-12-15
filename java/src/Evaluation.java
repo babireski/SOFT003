@@ -44,4 +44,11 @@ public class Evaluation
 	{
 		this.rating = rating;
 	}
+
+	/* Others */
+
+	public void evaluate()
+	{
+		
+	}
 }

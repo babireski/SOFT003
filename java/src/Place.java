@@ -1,9 +1,12 @@
+import java.util.*;
+
 public class Place 
 {
 	private String name;
 	private String description;
+	private List<Evaluation> evaluations;
 
-	public Place(String name, String description)
+	public Place(String name, String description, List<Evaluation> evaluations)
 	{
 		this.name = name;
 		this.description = description;
@@ -21,6 +24,11 @@ public class Place
 		return description;
 	}
 
+	public List<Evaluation> getEvaluations()
+	{
+		return evaluations;
+	}
+
 	/* Setters */
 
 	public void setName(String name)
@@ -31,5 +39,17 @@ public class Place
 	public void setDescription(String description)
 	{
 		this.description = description;
+	}
+
+	public void setEvaluations(List<Evaluation> evaluations)
+	{
+		this.evaluations = evaluations;
+	}
+
+	/* Others */
+
+	public void addEvaluation(Evaluation evaluation)
+	{
+		evaluations.add(evaluation);
 	}
 }
