@@ -1,21 +1,18 @@
 import java.util.*;
+import org.javatuples.*;
 
 public class Stretch
 {
 	private String name;
 	private float length;
-	private Coordinate a;
-	private Coordinate b;
-	private List<Coordinate> shape;
+	private Pair<Coordinate, Coordinate> coordinates;
 	private List<Inaccessibility> inaccessibilities;
 
-	public Stretch(Coordinate a, Coordinate b, List<Coordinate> shape, String name, float length, List<Inaccessibility> inaccessibilities)
+	public Stretch(String name, float length, Pair<Coordinate, Coordinate> coordinates, List<Inaccessibility> inaccessibilities)
 	{
 		this.name = name;
 		this.length = length;
-		this.a = a;
-		this.b = b;
-		this.shape = shape;
+		this.coordinates = coordinates;
 		this.inaccessibilities = inaccessibilities;
 	}
 
@@ -31,19 +28,9 @@ public class Stretch
 		return length;
 	}
 
-	public Coordinate getA()
+	public Pair<Coordinate, Coordinate> getCoordinates()
 	{
-		return a;
-	}
-
-	public Coordinate getB()
-	{
-		return b;
-	}
-
-	public List<Coordinate> getShape()
-	{
-		return shape;
+		return coordinates;
 	}
 	
 	public List<Inaccessibility> getInaccessibilities()
@@ -63,19 +50,9 @@ public class Stretch
 		this.length = length;
 	}
 
-	public void setA(Coordinate a)
+	public void setCoordinates(Pair<Coordinate, Coordinate> coordinates)
 	{
-		this.a = a;
-	}
-
-	public void setB(Coordinate b)
-	{
-		this.b = b;
-	}
-
-	public void setShape(List<Coordinate> shape)
-	{
-		this.shape = shape;
+		this.coordinates = coordinates;
 	}
 
 	public void setInaccessibilities(List<Inaccessibility> inaccessibilities)

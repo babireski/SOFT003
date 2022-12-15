@@ -1,14 +1,18 @@
+import java.util.*;
+
 public class Account
 {
 	private String name;
 	private String email;
 	private String password;
+	private List<List<Stretch>> routes;
 	
-	public Account(String name, String email, String password)
+	public Account(String name, String email, String password, List<List<Stretch>> routes)
 	{
 		this.name = name;
 		this.email = email;
 		this.password = password;
+		this.routes = routes;
 	}
 
 	/* Getters */
@@ -46,6 +50,11 @@ public class Account
 	}
 
 	/* Others */
+
+	public void addRoute(List<Stretch> route)
+	{
+		routes.add(route);
+	}
 
 	public void evaluatePlace()
 	{

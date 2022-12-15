@@ -1,17 +1,22 @@
 public class Inaccessibility
 {
+	private Account reporter;
 	private String type;
 	private String description;
-	private Account reporter;
 	
-	public Inaccessibility(String type, String description, Account reporter)
+	public Inaccessibility(Account reporter, String type, String description)
 	{
+		this.reporter = reporter;
 		this.type = type;
 		this.description = description;
-		this.reporter = reporter;
 	}
 
 	/* Getters */
+
+	public Account getReporter()
+	{
+		return reporter;
+	}
 
 	public String getType()
 	{
@@ -23,12 +28,12 @@ public class Inaccessibility
 		return description;
 	}
 
-	public Account getReporter()
-	{
-		return reporter;
-	}
-
 	/* Setters */
+
+	public void setReporter(Account reporter)
+	{
+		this.reporter = reporter;
+	}
 
 	public void setType(String type)
 	{
@@ -38,10 +43,5 @@ public class Inaccessibility
 	public void setDescription(String description)
 	{
 		this.description = description;
-	}
-
-	public void setReporter(Account reporter)
-	{
-		this.reporter = reporter;
 	}
 }
