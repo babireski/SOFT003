@@ -20,4 +20,11 @@ public class System
 	{
 		places.add(place);
 	}
+
+	public List<Stretch> getRoute(Coordinate departure, Coordinate destination)
+	{
+		List<Stretch> route = new ArrayList<Stretch>();
+
+		return route;
+	}
 }
