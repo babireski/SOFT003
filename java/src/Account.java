@@ -5,14 +5,13 @@ public class Account
 	private String name;
 	private String email;
 	private String password;
-	private List<List<Stretch>> routes;
+	private List<List<Stretch>> routes = new ArrayList<List<Stretch>>();
 	
-	public Account(String name, String email, String password, List<List<Stretch>> routes)
+	public Account(String name, String email, String password)
 	{
 		this.name = name;
 		this.email = email;
 		this.password = password;
-		this.routes = routes;
 	}
 
 	/* Getters */
@@ -32,6 +31,11 @@ public class Account
 		return password;
 	}
 
+	public List<List<Stretch>> getRoutes()
+	{
+		return routes;
+	}
+
 	/* Setters */
 
 	public void setName(String name)
@@ -47,6 +51,11 @@ public class Account
 	public void setPassword(String password)
 	{
 		this.password = password;
+	}
+
+	public void setRoutes(List<List<Stretch>> routes)
+	{
+		this.routes = routes;
 	}
 
 	/* Others */

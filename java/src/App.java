@@ -2,10 +2,9 @@ import java.util.*;
 
 public class App
 {
-	private static Scanner input = new Scanner(System.in);
-	private List<Stretch> stretches;
-	private List<Account> accounts;
-	private List<Place> places;
+	private List<Stretch> stretches = new ArrayList<Stretch>();
+	private List<Account> accounts = new ArrayList<Account>();
+	private List<Place> places = new ArrayList<Place>();
 	private static App instance = null;
 
 	public static App getInstance()
@@ -69,25 +68,5 @@ public class App
 	public void reportInaccessibility(Stretch stretch, Inaccessibility inaccessibility)
 	{
 		stretch.addInaccessibility(inaccessibility);
-	}
-
-	public Evaluation newEvaluation(Account account) throws Exception
-	{
-		System.out.print("Insert comment: ");
-		String comment = input.nextLine();
-		System.out.print("Insert rating: ");
-		float rating = Float.parseFloat(input.nextLine());
-
-		return new Evaluation(account, comment, rating);
-	}
-
-	public Inaccessibility newInaccessibility(Account account)
-	{
-		System.out.print("Insert type: ");
-		String type = input.nextLine();
-		System.out.print("Insert description: ");
-		String description = input.nextLine();
-
-		return new Inaccessibility(account, type, description);
 	}
 }

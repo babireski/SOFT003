@@ -1,8 +1,8 @@
-import junit.framework.*;
+import junit.framework.TestCase;
 import static org.junit.Assert.*;
 import org.junit.*;
 
-public class StretchTest
+public class StretchTest extends TestCase
 {
 	public StretchTest()
 	{

@@ -1,8 +1,8 @@
-import junit.framework.*;
+import junit.framework.TestCase;
 import static org.junit.Assert.*;
 import org.junit.*;
 
-public class EvaluationTest
+public class EvaluationTest extends TestCase
 {
 	public EvaluationTest()
 	{
