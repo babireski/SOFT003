@@ -4,12 +4,15 @@ public class Place
 {
 	private String name;
 	private String description;
+	private Stretch location;
 	private List<Evaluation> evaluations;
 
-	public Place(String name, String description, List<Evaluation> evaluations)
+	public Place(String name, String description, Stretch location, List<Evaluation> evaluations)
 	{
 		this.name = name;
 		this.description = description;
+		this.location = location;
+		this.evaluations = evaluations;
 	}
 
 	/* Getters */
@@ -22,6 +25,11 @@ public class Place
 	public String getDescription()
 	{
 		return description;
+	}
+
+	public Stretch getLocation()
+	{
+		return location;
 	}
 
 	public List<Evaluation> getEvaluations()
@@ -39,6 +47,11 @@ public class Place
 	public void setDescription(String description)
 	{
 		this.description = description;
+	}
+
+	public void setLocation(Stretch location)
+	{
+		this.location = location;
 	}
 
 	public void setEvaluations(List<Evaluation> evaluations)
