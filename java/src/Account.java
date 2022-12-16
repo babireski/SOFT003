@@ -56,18 +56,20 @@ public class Account
 		routes.add(route);
 	}
 
-	public void evaluatePlace(Place place)
+	public void evaluatePlace(Place place, Evaluation evaluation)
 	{
-		Main.evaluatePlace(place, this);
+		evaluation.setEvaluator(this);
+		App.getInstance().evaluatePlace(place, evaluation);
 	}
 
-	public void reportInaccessibility(Stretch stretch)
+	public void reportInaccessibility(Stretch stretch, Inaccessibility inaccessibility)
 	{
-		Main.reportInaccessibility(stretch, this);
+		inaccessibility.setReporter(this);
+		App.getInstance().reportInaccessibility(stretch, inaccessibility);
 	}
 
 	public void deleteAccount()
 	{
-		Main.deleteAccount(this);
+		App.getInstance().deleteAccount(this);
 	}
 }

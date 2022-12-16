@@ -8,8 +8,13 @@ public class Stretch
 	private Pair<Coordinate, Coordinate> coordinates;
 	private List<Inaccessibility> inaccessibilities;
 
-	public Stretch(String name, float length, Pair<Coordinate, Coordinate> coordinates, List<Inaccessibility> inaccessibilities)
+	public Stretch(String name, float length, Pair<Coordinate, Coordinate> coordinates, List<Inaccessibility> inaccessibilities) throws Exception
 	{
+		if(length <= 0)
+		{
+			throw new Exception();
+		}
+
 		this.name = name;
 		this.length = length;
 		this.coordinates = coordinates;

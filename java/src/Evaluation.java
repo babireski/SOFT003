@@ -4,8 +4,13 @@ public class Evaluation
 	private String comment;
 	private float rating;
 
-	public Evaluation(Account evaluator, String comment, float rating)
+	public Evaluation(Account evaluator, String comment, float rating) throws Exception
 	{
+		if(rating < 0 || rating > 10)
+		{
+			throw new Exception();
+		}
+
 		this.evaluator = evaluator;
 		this.comment = comment;
 		this.rating = rating;
