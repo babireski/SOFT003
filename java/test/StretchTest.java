@@ -22,7 +22,7 @@ public class StretchTest extends TestCase
 	}
 
 	@Test
-	public void testConstructor() throws Exception
+	public void testStretch() throws Exception
 	{
 		assertThrows(Exception.class, () -> {new Stretch(null, 0, null, null);});
 		assertThrows(Exception.class, () -> {new Stretch(null, -1, null, null);});
