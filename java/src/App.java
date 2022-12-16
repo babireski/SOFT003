@@ -7,6 +7,8 @@ public class App
 	private List<Place> places = new ArrayList<Place>();
 	private static App instance = null;
 
+	/* Getters */
+
 	public static App getInstance()
 	{
 		if(instance == null)
@@ -17,7 +19,23 @@ public class App
 		return instance;
 	}
 
-	/* Add */
+	public List<Stretch> getStretches()
+	{
+		return stretches;
+	}
+
+	public List<Account> getAccounts()
+	{
+		return accounts;
+	}
+
+	public List<Place> getPlaces()
+	{
+		return places;
+	}
+
+
+	/* Adders */
 
 	public void addStretch(Stretch stretch)
 	{
@@ -32,6 +50,16 @@ public class App
 	public void addPlaces(Place place)
 	{
 		places.add(place);
+	}
+
+	public void addEvaluation(Place place, Evaluation evaluation)
+	{
+		place.addEvaluation(evaluation);
+	}
+
+	public void addInaccessibility(Stretch stretch, Inaccessibility inaccessibility)
+	{
+		stretch.addInaccessibility(inaccessibility);
 	}
 
 	/* Delete */
@@ -58,15 +86,5 @@ public class App
 		List<Stretch> route = new ArrayList<Stretch>();
 
 		return route;
-	}
-
-	public void evaluatePlace(Place place, Evaluation evaluation)
-	{
-		place.addEvaluation(evaluation);
-	}
-
-	public void reportInaccessibility(Stretch stretch, Inaccessibility inaccessibility)
-	{
-		stretch.addInaccessibility(inaccessibility);
 	}
 }

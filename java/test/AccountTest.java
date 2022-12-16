@@ -40,11 +40,21 @@ public class AccountTest extends TestCase
 
 		expected.add(route);
 
-		assertEquals(actual, expected);
+		assertEquals(expected, actual);
 	}
 
-	public void deleteAccountTest()
+	@Test
+	public void testDeleteAccount()
 	{
+		App app = App.getInstance();
+		
 		Account account = new Account("Pedro", "pedro@gmail.com", "12345");
+		app.addAccount(account);
+		account.deleteAccount();
+
+		List<Account> expected = new ArrayList<Account>();
+		List<Account> actual = app.getAccounts();
+
+		assertEquals(expected, actual);
 	}
 }

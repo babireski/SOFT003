@@ -68,13 +68,13 @@ public class Account
 	public void evaluatePlace(Place place, Evaluation evaluation)
 	{
 		evaluation.setEvaluator(this);
-		App.getInstance().evaluatePlace(place, evaluation);
+		App.getInstance().addEvaluation(place, evaluation);
 	}
 
 	public void reportInaccessibility(Stretch stretch, Inaccessibility inaccessibility)
 	{
 		inaccessibility.setReporter(this);
-		App.getInstance().reportInaccessibility(stretch, inaccessibility);
+		App.getInstance().addInaccessibility(stretch, inaccessibility);
 	}
 
 	public void deleteAccount()
