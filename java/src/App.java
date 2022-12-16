@@ -81,7 +81,7 @@ public class App
 
 	/* Others */
 	
-	public List<Stretch> getRoute(Coordinate departure, Coordinate destination)
+	public List<Stretch> traceRoute(Coordinate departure, Coordinate destination)
 	{
 		List<Stretch> route = new ArrayList<Stretch>();
 
