@@ -5,14 +5,13 @@ public class Place
 	private String name;
 	private String description;
 	private Stretch location;
-	private List<Evaluation> evaluations;
+	private List<Evaluation> evaluations = new ArrayList<Evaluation>();
 
-	public Place(String name, String description, Stretch location, List<Evaluation> evaluations)
+	public Place(String name, String description, Stretch location)
 	{
 		this.name = name;
 		this.description = description;
 		this.location = location;
-		this.evaluations = evaluations;
 	}
 
 	/* Getters */

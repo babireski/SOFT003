@@ -25,8 +25,8 @@ public class AccountTest extends TestCase
 	@Test
 	public void testAddRoute() throws Exception
 	{
-		Stretch s = new Stretch("Rua das Flores", 150, new Pair<Coordinate,Coordinate>(new Coordinate(1640, 1530), new Coordinate(1780, 1610)), null);
-		Stretch t = new Stretch("Rua das Palmeiras", 500, new Pair<Coordinate,Coordinate>(new Coordinate(1780, 1610), new Coordinate(1800, 1600)), null);
+		Stretch s = new Stretch("Rua das Flores", 150, new Pair<Coordinate,Coordinate>(new Coordinate(1640, 1530), new Coordinate(1780, 1610)));
+		Stretch t = new Stretch("Rua das Palmeiras", 500, new Pair<Coordinate,Coordinate>(new Coordinate(1780, 1610), new Coordinate(1800, 1600)));
 		
 		List<Stretch> route = new ArrayList<Stretch>();
 		route.add(s);

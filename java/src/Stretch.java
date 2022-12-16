@@ -6,9 +6,9 @@ public class Stretch
 	private String name;
 	private float length;
 	private Pair<Coordinate, Coordinate> coordinates;
-	private List<Inaccessibility> inaccessibilities;
+	private List<Inaccessibility> inaccessibilities = new ArrayList<Inaccessibility>();
 
-	public Stretch(String name, float length, Pair<Coordinate, Coordinate> coordinates, List<Inaccessibility> inaccessibilities) throws Exception
+	public Stretch(String name, float length, Pair<Coordinate, Coordinate> coordinates) throws Exception
 	{
 		if(length <= 0)
 		{
@@ -18,7 +18,6 @@ public class Stretch
 		this.name = name;
 		this.length = length;
 		this.coordinates = coordinates;
-		this.inaccessibilities = inaccessibilities;
 	}
 
 	/* Getters */
