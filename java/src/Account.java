@@ -56,18 +56,18 @@ public class Account
 		routes.add(route);
 	}
 
-	public void evaluatePlace()
+	public void evaluatePlace(Place place)
 	{
-
+		Main.evaluatePlace(place, this);
 	}
 
-	public void reportInaccessibility()
+	public void reportInaccessibility(Stretch stretch)
 	{
-
+		Main.reportInaccessibility(stretch, this);
 	}
 
 	public void deleteAccount()
 	{
-
+		Main.deleteAccount(this);
 	}
 }

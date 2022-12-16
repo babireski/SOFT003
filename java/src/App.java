@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class System
+public class App
 {
 	private List<Stretch> stretches;
 	private List<Account> accounts;
@@ -19,6 +19,21 @@ public class System
 	public void addPlaces(Place place)
 	{
 		places.add(place);
+	}
+
+	public void deleteStretch(Stretch stretch)
+	{
+		stretches.remove(stretch);
+	}
+
+	public void deleteAccount(Account account)
+	{
+		accounts.remove(account);
+	}
+
+	public void deletePlaces(Place place)
+	{
+		places.remove(place);
 	}
 
 	public List<Stretch> getRoute(Coordinate departure, Coordinate destination)
